@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import ReactDOM from "react-dom/client";
+import Hemisphere from "./Hemisphere";
 
 const App = () => {
   const [latitude, setLatitude] = React.useState(null);
@@ -17,7 +18,8 @@ const App = () => {
       {errorMessage && !latitude
         ?  errorMessage 
         : !errorMessage && latitude
-        ? latitude
+        ? <Hemisphere latitude={latitude}>
+        </Hemisphere>
         : "Loading..."}
     </div>
   );
