@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const SearchInput = ({onSearchSubmit}) => {
+const SearchInput = ({ onSearchSubmit }) => {
   const [entry, setEntry] = useState("");
 
   const handleSubmit = (event) => {
@@ -21,7 +21,11 @@ const SearchInput = ({onSearchSubmit}) => {
               }}
               value={entry}
             />
-            <i className="search icon"></i>
+            <i
+              className="search icon"
+              onClick={handleSubmit}
+              style={{ cursor: "pointer" }}
+            ></i>
           </div>
         </div>
       </form>
