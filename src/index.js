@@ -1,18 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-
-const App = () =>{
-    return(
-        <div>
-            <label htmlFor="email" className = "label">enter e-mail</label>
-            <input type="email" id="email" name="email"/>
-            <button style={{backgroundColor:'blue',color:'white'}} type="submit">Submit</button>
-        </div>
-    )
-}
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter as Router } from "react-router-dom";
+import App from "./App";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(<React.StrictMode>
+root.render(
+  <Router>
     <App />
-</React.StrictMode>)
+  </Router>
+);
