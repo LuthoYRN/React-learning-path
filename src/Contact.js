@@ -35,7 +35,7 @@ const Contact = () => {
           Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
           Nulla consequat massa quis enim. Donec pede justo, fringilla vel,
           aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut,
-          imperdiet a, venenatis vitae, justo.
+          imperdiet a, venenatis vitae, justo.r
         </p>
       </div>{" "}
       <div
