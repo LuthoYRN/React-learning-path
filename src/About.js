@@ -4,7 +4,7 @@ import Modal from "./components/Modal";
 const About = () => {
   return (
     <div>
-      <Modal />
+      <Modal isActive="active" />
       <div
         className="ui raised very padded text container segment"
         style={{ marginTop: "80px" }}
