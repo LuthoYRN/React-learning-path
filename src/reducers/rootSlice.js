@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { useNavigate } from "react-router-dom";
 const initialState = {
   cards: [
     {
@@ -43,15 +44,12 @@ const rootSlice = createSlice({
   name: "root",
   initialState,
   reducers: {
-    addToCards(state, action) {
-      state.push({
-        id: action.payload.id,
-        title: action.payload.title,
-        body: action.payload.body,
-      });
+    deleteCard(state, action) {
+      const { id } = action.payload;
+      state.cards = state.cards.filter((card) => card.id !== id);
     },
   },
 });
 
-//export const { ,  } = rootSlice.actions
+export const { deleteCard } = rootSlice.actions;
 export default rootSlice.reducer;
