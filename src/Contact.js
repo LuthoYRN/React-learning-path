@@ -1,9 +1,16 @@
 import React from "react";
+import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
+import { fetchUsers } from "./reducers/rootSlice";
 const Contact = () => {
   const { cards } = useSelector((state) => state.root);
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchUsers());
+  }, [dispatch]);
+
   return (
     <div>
       {cards.map((card) => {
